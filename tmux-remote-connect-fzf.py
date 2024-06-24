@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import json
 from typing import Optional, List
 
@@ -27,10 +28,11 @@ class Session:
 
 
 def get_config() -> Optional[dict]:
-    config_file_name = "config.json"
+    config_file_name = os.path.join(str(Path.home()), ".config/trcf/config.json")
     config = None
 
     if not os.path.exists(config_file_name):
+        print(f"WARNING: Config file does not exist. Expected @ {config_file_name}")
         return None
 
     with open(config_file_name) as f:
