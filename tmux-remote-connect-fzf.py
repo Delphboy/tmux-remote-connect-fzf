@@ -87,4 +87,4 @@ if __name__ == "__main__":
 
     selection = os.popen(f"echo '{fzf_er(all_sessions)}' | fzf").read()
     session = get_session(selection, all_sessions)
-    print(session.get_connection_command())
+    os.system(session.get_connection_command())
