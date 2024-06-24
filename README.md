@@ -35,3 +35,7 @@ The python script will read in a `config.json` file that contains the remote ser
   }
 }
 ```
+
+## Alias
+
+For ease of use, I put an alias in my `~/.zshrc` file: `alias trcf='python3 /path/to/download/tmux-remote-connect-fzf.py'`
